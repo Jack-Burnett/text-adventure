@@ -4,10 +4,7 @@ import Classification
 import Consequence
 import actions.definitions.Close
 import actions.definitions.Open
-import Thing
-import actions.Action
 import actions.ActionDetails
-import actions.Verb
 
 class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
     enum class State {

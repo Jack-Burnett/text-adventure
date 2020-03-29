@@ -1,12 +1,14 @@
 import actions.*
 import actions.definitions.*
-import attributes.Attribute
-import attributes.Coloured
-import attributes.Locked
-import attributes.Sealable
+import attributes.*
 import kotlin.streams.toList
 
 class Core {
+    val verbManager = VerbManager()
+    val actionManager = ActionManager()
+    val context = mutableListOf<Thing>()
+
+    val heldItems = mutableListOf<Thing>()
 
     fun describe(thing:Thing):String {
         val sorted = thing.attributes.sortedBy { a: Attribute -> a.classification }
@@ -40,10 +42,6 @@ class Core {
 
     fun main() {
 
-        val verbManager = VerbManager()
-
-        val actionManager = ActionManager()
-
         val door = Thing("door", mutableListOf(
             Coloured(Colour.RED),
             Sealable(Sealable.State.CLOSED),
@@ -51,18 +49,25 @@ class Core {
 
         val chest = Thing("chest", mutableListOf(Coloured(Colour.BLUE), Sealable(Sealable.State.CLOSED)))
         val gate = Thing("gate", mutableListOf(Coloured(Colour.GREEN), Sealable(Sealable.State.OPEN)))
+        val redPaint = Thing("paintpot", mutableListOf(Coloured(Colour.RED), Colours(Colour.RED), SmallItem()))
 
-        val context = mutableListOf(door, chest, gate)
-
-        val heldItems = mutableListOf<Thing>()
+        context.addAll(listOf(door, chest, gate, redPaint))
 
         while(true) {
             actionManager.reset()
             actionManager.add(Break())
             actionManager.add(Open())
             actionManager.add(Close())
-            actionManager.add(Paint(Colour.RED))
-            actionManager.add(Unlock())
+            actionManager.add(Pickup())
+
+            for(item in this.heldItems) {
+                for(attr in item.attributes) {
+                    actionManager.addAll(attr.grantActions())
+                }
+            }
+            //actionManager.add(Paint(Colour.RED))
+            //actionManager.add(Unlock())
+
 
             describe(context)
 
@@ -92,9 +97,9 @@ class Core {
 
                     val actions:List<Action> = actionManager.actions(verb.action)
                     if(actions.isEmpty()) {
-                        println("I am unable to $verb")
+                        println("I am unable to ${verb.presentTense}")
                     } else {
-                        val actionDetails = ActionDetails(actions[0], verb, subject)
+                        val actionDetails = ActionDetails(actions[0], verb, subject, this)
                         val consequence:Consequence? = actions[0].apply(actionDetails)
                         if(consequence != null) {
                             consequence.action.invoke()

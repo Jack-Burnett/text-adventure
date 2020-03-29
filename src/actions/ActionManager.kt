@@ -18,4 +18,10 @@ class ActionManager {
         actions[action.name]?.add(action)
     }
 
+    fun addAll(actions : List<Action>) {
+        for(action in actions) {
+            add(action)
+        }
+    }
+
 }

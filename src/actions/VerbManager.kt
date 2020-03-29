@@ -21,6 +21,9 @@ class VerbManager {
         insert(ActionName.UNLOCK,  listOf(
             VerbDefinition("unlocked", "unlock")
         ))
+        insert(ActionName.PICKUP,  listOf(
+            VerbDefinition("pickup", "pickup")
+        ))
     }
 
     private fun insert(action: ActionName, synonyms:List<VerbDefinition>) {
