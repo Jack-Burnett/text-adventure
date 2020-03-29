@@ -41,23 +41,6 @@ class Core {
     fun main() {
 
         val verbManager = VerbManager()
-        verbManager.insert(ActionName.DESTROY,  listOf(
-            VerbManager.VerbDefinition("broke", "break"),
-            VerbManager.VerbDefinition("destroyed", "destroy"),
-            VerbManager.VerbDefinition("smashed", "smash")
-        ))
-        verbManager.insert(ActionName.OPEN,  listOf(
-            VerbManager.VerbDefinition("open", "open")
-        ))
-        verbManager.insert(ActionName.CLOSE,  listOf(
-            VerbManager.VerbDefinition("close", "close")
-        ))
-        verbManager.insert(ActionName.PAINT,  listOf(
-            VerbManager.VerbDefinition("paint", "paint")
-        ))
-        verbManager.insert(ActionName.UNLOCK,  listOf(
-            VerbManager.VerbDefinition("unlocked", "unlock")
-        ))
 
         val actionManager = ActionManager()
 
@@ -70,6 +53,8 @@ class Core {
         val gate = Thing("gate", mutableListOf(Coloured(Colour.GREEN), Sealable(Sealable.State.OPEN)))
 
         val context = mutableListOf(door, chest, gate)
+
+        val heldItems = mutableListOf<Thing>()
 
         while(true) {
             actionManager.reset()
@@ -109,7 +94,8 @@ class Core {
                     if(actions.isEmpty()) {
                         println("I am unable to $verb")
                     } else {
-                        val consequence:Consequence? = actions[0].apply(actions[0], subject, verb)
+                        val actionDetails = ActionDetails(actions[0], verb, subject)
+                        val consequence:Consequence? = actions[0].apply(actionDetails)
                         if(consequence != null) {
                             consequence.action.invoke()
                         } else {

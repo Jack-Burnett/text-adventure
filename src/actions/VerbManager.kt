@@ -3,7 +3,27 @@ package actions
 class VerbManager {
     private val verbs = mutableMapOf<String, Verb>()
 
-    fun insert(action: ActionName, synonyms:List<VerbDefinition>) {
+    init {
+        insert(ActionName.DESTROY,  listOf(
+            VerbDefinition("broke", "break"),
+            VerbDefinition("destroyed", "destroy"),
+            VerbDefinition("smashed", "smash")
+        ))
+        insert(ActionName.OPEN,  listOf(
+            VerbDefinition("open", "open")
+        ))
+        insert(ActionName.CLOSE,  listOf(
+            VerbDefinition("close", "close")
+        ))
+        insert(ActionName.PAINT,  listOf(
+            VerbDefinition("paint", "paint")
+        ))
+        insert(ActionName.UNLOCK,  listOf(
+            VerbDefinition("unlocked", "unlock")
+        ))
+    }
+
+    private fun insert(action: ActionName, synonyms:List<VerbDefinition>) {
         for(def in synonyms) {
             val verb = Verb(def.pastTense, def.presentTense, action)
             verbs[def.presentTense] = verb

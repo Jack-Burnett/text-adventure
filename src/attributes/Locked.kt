@@ -3,6 +3,7 @@ package attributes
 import Consequence
 import Thing
 import actions.Action
+import actions.ActionDetails
 import actions.Verb
 import actions.definitions.Open
 import actions.definitions.Picklock
@@ -10,13 +11,13 @@ import actions.definitions.Unlock
 
 class Locked(private val check: (Locked, Thing) -> Boolean): Attribute("locked", Classification.STATE) {
 
-    override fun actOn(action: Action, verb: Verb, owner: Thing):Consequence? {
-        when (action) {
+    override fun actOn(actionDetails:ActionDetails):Consequence? {
+        when (actionDetails.action) {
             is Unlock -> {
-                return if(check.invoke(this, owner)) {
+                return if(check.invoke(this, actionDetails.subject)) {
                     Consequence {
-                        owner.attributes.remove(this)
-                        println("You unlock the ${owner.name}")
+                        actionDetails.subject.attributes.remove(this)
+                        println("You unlock the ${actionDetails.subject.name}")
                     }
                 } else {
                     Consequence {
@@ -26,8 +27,8 @@ class Locked(private val check: (Locked, Thing) -> Boolean): Attribute("locked",
             }
             is Picklock -> {
                 return Consequence {
-                    owner.attributes.remove(this)
-                    println("You pick the lock on the ${owner.name}")
+                    actionDetails.subject.attributes.remove(this)
+                    println("You pick the lock on the ${actionDetails.subject.name}")
                 }
             }
             else -> {
@@ -36,8 +37,8 @@ class Locked(private val check: (Locked, Thing) -> Boolean): Attribute("locked",
         }
     }
 
-    override fun intercepts(action: Action, verb: Verb, owner: Thing):Consequence? {
-        return when(action) {
+    override fun intercepts(actionDetails:ActionDetails):Consequence? {
+        return when(actionDetails.action) {
             is Open -> {
                 Consequence {
                     println("The door is locked")

@@ -6,6 +6,7 @@ import actions.definitions.Close
 import actions.definitions.Open
 import Thing
 import actions.Action
+import actions.ActionDetails
 import actions.Verb
 
 class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
@@ -17,19 +18,19 @@ class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
         return state.toString().toLowerCase()
     }
 
-    override fun actOn(action: Action, verb: Verb, owner: Thing):Consequence? {
-        when (action) {
+    override fun actOn(actionDetails: ActionDetails):Consequence? {
+        when (actionDetails.action) {
             is Open -> {
                 return Consequence {
                     this.state = State.OPEN
-                    println("You open the ${owner.name}")
+                    println("You open the ${actionDetails.subject.name}")
                 }
 
             }
             is Close -> {
                 return Consequence {
                     this.state = State.CLOSED
-                    println("You close the ${owner.name}")
+                    println("You close the ${actionDetails.subject.name}")
                 }
             }
             else -> {

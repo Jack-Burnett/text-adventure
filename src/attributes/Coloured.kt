@@ -6,6 +6,7 @@ import Consequence
 import actions.definitions.Paint
 import Thing
 import actions.Action
+import actions.ActionDetails
 import actions.Verb
 
 class Coloured(private var state: Colour) : Attribute("colour",
@@ -16,12 +17,12 @@ class Coloured(private var state: Colour) : Attribute("colour",
         return state.toString().toLowerCase()
     }
 
-    override fun actOn(action: Action, verb: Verb, owner: Thing):Consequence? {
-        return when (action) {
+    override fun actOn(actionDetails: ActionDetails):Consequence? {
+        return when (actionDetails.action) {
             is Paint -> {
                 Consequence {
-                    this.state = action.colour
-                    println("You paint the ${owner.name} ${this.state.toString().toLowerCase()}")
+                    this.state = actionDetails.action.colour
+                    println("You paint the ${actionDetails.subject.name} ${this.state.toString().toLowerCase()}")
                 }
             } else -> {
                 null

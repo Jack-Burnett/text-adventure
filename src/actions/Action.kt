@@ -4,15 +4,15 @@ import Consequence
 import Thing
 
 open class Action(val name: ActionName) {
-    fun apply(action: Action, subject: Thing, verb: Verb):Consequence? {
-        for(att in subject.attributes) {
-            val consequence:Consequence? = att.intercepts(action, verb, subject)
+    fun apply(actionDetails: ActionDetails):Consequence? {
+        for(att in actionDetails.subject.attributes) {
+            val consequence:Consequence? = att.intercepts(actionDetails)
             if(consequence != null) {
                 return consequence
             }
         }
-        for(att in subject.attributes) {
-            val consequence:Consequence? = att.actOn(action, verb, subject)
+        for(att in actionDetails.subject.attributes) {
+            val consequence:Consequence? = att.actOn(actionDetails)
             if(consequence != null) {
                 return consequence
             }

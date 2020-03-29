@@ -4,6 +4,7 @@ import Classification
 import Consequence
 import Thing
 import actions.Action
+import actions.ActionDetails
 import actions.Verb
 
 abstract class Attribute(
@@ -15,7 +16,7 @@ abstract class Attribute(
         return name
     }
 
-    open fun actOn(action: Action, verb: Verb, owner: Thing):Consequence? { return null}
+    open fun actOn(details: ActionDetails):Consequence? { return null}
 
-    open fun intercepts(action:Action, verb: Verb, owner: Thing):Consequence? { return null}
+    open fun intercepts(details:ActionDetails):Consequence? { return null}
 }
