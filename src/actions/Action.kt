@@ -2,21 +2,17 @@ package actions
 
 import Consequence
 import Thing
-import Verb
-import org.w3c.dom.Attr
-import javax.management.Attribute
 
-open class Action(canonicalName: String) {
-    val canonicalName = canonicalName
-    fun apply(subject: Thing, verb: Verb):Consequence? {
+open class Action(val name: ActionName) {
+    fun apply(action: Action, subject: Thing, verb: Verb):Consequence? {
         for(att in subject.attributes) {
-            val consequence:Consequence? = att.intercepts(verb, subject);
+            val consequence:Consequence? = att.intercepts(action, verb, subject)
             if(consequence != null) {
                 return consequence
             }
         }
         for(att in subject.attributes) {
-            val consequence:Consequence? = att.actOn(verb, subject);
+            val consequence:Consequence? = att.actOn(action, verb, subject)
             if(consequence != null) {
                 return consequence
             }

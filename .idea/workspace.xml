@@ -2,8 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9359e08-072d-45b4-9ad5-ff6737e39407" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Colour.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Consequence.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thing.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/ActionManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/ActionName.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/definitions/Close.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/definitions/Open.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/definitions/Unlock.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Colour.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Colour.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Consequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Consequence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/MainKt$describe$$inlined$sortedBy$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/MainKt$describe$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/MainKt$describe$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/MainKt$describe$description$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/MainKt$main$door$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/MainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Thing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Thing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Verb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/VerbManager$VerbDefinition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/VerbManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/actions/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/actions/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/actions/Break.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/actions/Close.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/actions/Open.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/actions/Paint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/actions/Picklock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/actions/Unlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Attribute.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Attribute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Coloured$actOn$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Coloured$actOn$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Coloured.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Coloured.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked$actOn$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked$actOn$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked$actOn$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked$actOn$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked$actOn$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked$actOn$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked$intercepts$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked$intercepts$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Locked.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$actOn$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$actOn$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$actOn$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$actOn$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Verb.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/Verb.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VerbMan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/VerbManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/Action.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/Action.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/Break.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/definitions/Break.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/Close.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/Open.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/Paint.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/definitions/Paint.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/Picklock.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/definitions/Picklock.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/Unlock.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/Attribute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Attribute.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/Coloured.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Coloured.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/Locked.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Locked.kt" afterDir="false" />
@@ -41,11 +90,15 @@
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="actions" />
-      <recent name="attributes" />
+      <recent name="actions.definitions" />
       <recent name="" />
+      <recent name="attributes" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="actions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\TextAdventure\src\actions" />
     </key>
   </component>
   <component name="RunManager">
@@ -90,38 +143,38 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="525" y="210" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1600.870@0.0.1600.870" timestamp="1585492684967" />
-    <state x="593" y="270" key="#com.intellij.refactoring.move.moveInner.MoveInnerDialog" timestamp="1585478243899">
+    <state x="593" y="270" key="#com.intellij.refactoring.move.moveInner.MoveInnerDialog" timestamp="1585501412751">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="593" y="270" key="#com.intellij.refactoring.move.moveInner.MoveInnerDialog/0.0.1600.870@0.0.1600.870" timestamp="1585478243899" />
+    <state x="593" y="270" key="#com.intellij.refactoring.move.moveInner.MoveInnerDialog/0.0.1600.870@0.0.1600.870" timestamp="1585501412751" />
     <state x="432" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585492509324">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="432" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.870@0.0.1600.870" timestamp="1585492509324" />
-    <state x="574" y="87" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1585492814768">
+    <state x="574" y="87" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1585501376269">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="574" y="87" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1600.870@0.0.1600.870" timestamp="1585492814768" />
-    <state x="664" y="360" key="#org.jetbrains.kotlin.idea.refactoring.move.moveTopLevelDeclarations.ui.KotlinSelectInnerOrMembersRefactoringDialog" timestamp="1585478241987">
+    <state x="574" y="87" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1600.870@0.0.1600.870" timestamp="1585501376269" />
+    <state x="664" y="360" key="#org.jetbrains.kotlin.idea.refactoring.move.moveTopLevelDeclarations.ui.KotlinSelectInnerOrMembersRefactoringDialog" timestamp="1585501406334">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="664" y="360" key="#org.jetbrains.kotlin.idea.refactoring.move.moveTopLevelDeclarations.ui.KotlinSelectInnerOrMembersRefactoringDialog/0.0.1600.870@0.0.1600.870" timestamp="1585478241987" />
-    <state width="1557" height="97" key="GridCell.Tab.0.bottom" timestamp="1585499801082">
+    <state x="664" y="360" key="#org.jetbrains.kotlin.idea.refactoring.move.moveTopLevelDeclarations.ui.KotlinSelectInnerOrMembersRefactoringDialog/0.0.1600.870@0.0.1600.870" timestamp="1585501406334" />
+    <state width="1557" height="167" key="GridCell.Tab.0.bottom" timestamp="1585503260816">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="97" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1585499801082" />
-    <state width="1557" height="97" key="GridCell.Tab.0.center" timestamp="1585499801082">
+    <state width="1557" height="167" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1585503260816" />
+    <state width="1557" height="167" key="GridCell.Tab.0.center" timestamp="1585503260816">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="97" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1585499801082" />
-    <state width="1557" height="97" key="GridCell.Tab.0.left" timestamp="1585499801082">
+    <state width="1557" height="167" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1585503260816" />
+    <state width="1557" height="167" key="GridCell.Tab.0.left" timestamp="1585503260816">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="97" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1585499801082" />
-    <state width="1557" height="97" key="GridCell.Tab.0.right" timestamp="1585499801082">
+    <state width="1557" height="167" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1585503260816" />
+    <state width="1557" height="167" key="GridCell.Tab.0.right" timestamp="1585503260816">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="97" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1585499801082" />
+    <state width="1557" height="167" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1585503260816" />
     <state x="501" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1585494345261">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

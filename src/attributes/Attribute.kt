@@ -3,7 +3,8 @@ package attributes
 import Classification
 import Consequence
 import Thing
-import Verb
+import actions.Action
+import actions.Verb
 
 abstract class Attribute(
     private val name: String,
@@ -14,7 +15,7 @@ abstract class Attribute(
         return name
     }
 
-    open fun actOn(verb: Verb, owner: Thing):Consequence? { return null}
+    open fun actOn(action: Action, verb: Verb, owner: Thing):Consequence? { return null}
 
-    open fun intercepts(verb: Verb, owner: Thing):Consequence? { return null}
+    open fun intercepts(action:Action, verb: Verb, owner: Thing):Consequence? { return null}
 }

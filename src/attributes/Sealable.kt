@@ -2,10 +2,11 @@ package attributes
 
 import Classification
 import Consequence
-import actions.Close
-import actions.Open
+import actions.definitions.Close
+import actions.definitions.Open
 import Thing
-import Verb
+import actions.Action
+import actions.Verb
 
 class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
     enum class State {
@@ -16,8 +17,8 @@ class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
         return state.toString().toLowerCase()
     }
 
-    override fun actOn(verb: Verb, owner: Thing):Consequence? {
-        when (verb.action) {
+    override fun actOn(action: Action, verb: Verb, owner: Thing):Consequence? {
+        when (action) {
             is Open -> {
                 return Consequence {
                     this.state = State.OPEN
