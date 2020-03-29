@@ -19,7 +19,7 @@ class Coloured(private var state: Colour) : Attribute("colour",
         return when (verb.action) {
             is Paint -> {
                 Consequence {
-                    this.state = verb.action.colour;
+                    this.state = verb.action.colour
                     println("You paint the ${owner.name} ${this.state.toString().toLowerCase()}")
                 }
             } else -> {

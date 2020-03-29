@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9359e08-072d-45b4-9ad5-ff6737e39407" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VerbMan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/VerbMan.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/Action.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/Action.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/Attribute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Attribute.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/Coloured.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Coloured.kt" afterDir="false" />
@@ -109,22 +106,22 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="664" y="360" key="#org.jetbrains.kotlin.idea.refactoring.move.moveTopLevelDeclarations.ui.KotlinSelectInnerOrMembersRefactoringDialog/0.0.1600.870@0.0.1600.870" timestamp="1585478241987" />
-    <state width="1557" height="117" key="GridCell.Tab.0.bottom" timestamp="1585498587629">
+    <state width="1557" height="97" key="GridCell.Tab.0.bottom" timestamp="1585499801082">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="117" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1585498587629" />
-    <state width="1557" height="117" key="GridCell.Tab.0.center" timestamp="1585498587629">
+    <state width="1557" height="97" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1585499801082" />
+    <state width="1557" height="97" key="GridCell.Tab.0.center" timestamp="1585499801082">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="117" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1585498587629" />
-    <state width="1557" height="117" key="GridCell.Tab.0.left" timestamp="1585498587629">
+    <state width="1557" height="97" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1585499801082" />
+    <state width="1557" height="97" key="GridCell.Tab.0.left" timestamp="1585499801082">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="117" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1585498587629" />
-    <state width="1557" height="117" key="GridCell.Tab.0.right" timestamp="1585498587629">
+    <state width="1557" height="97" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1585499801082" />
+    <state width="1557" height="97" key="GridCell.Tab.0.right" timestamp="1585499801082">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="117" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1585498587629" />
+    <state width="1557" height="97" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1585499801082" />
     <state x="501" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1585494345261">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

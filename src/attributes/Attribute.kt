@@ -5,7 +5,7 @@ import Consequence
 import Thing
 import Verb
 
-open abstract class Attribute(
+abstract class Attribute(
     private val name: String,
     val classification: Classification
 ) {
@@ -15,4 +15,6 @@ open abstract class Attribute(
     }
 
     open fun actOn(verb: Verb, owner: Thing):Consequence? { return null}
+
+    open fun intercepts(verb: Verb, owner: Thing):Consequence? { return null}
 }

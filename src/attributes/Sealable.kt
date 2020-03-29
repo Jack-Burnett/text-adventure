@@ -20,14 +20,14 @@ class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
         when (verb.action) {
             is Open -> {
                 return Consequence {
-                    this.state = State.OPEN;
+                    this.state = State.OPEN
                     println("You open the ${owner.name}")
                 }
 
             }
             is Close -> {
                 return Consequence {
-                    this.state = State.CLOSED;
+                    this.state = State.CLOSED
                     println("You close the ${owner.name}")
                 }
             }

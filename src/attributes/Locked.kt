@@ -3,6 +3,7 @@ package attributes
 import Consequence
 import Thing
 import Verb
+import actions.Open
 import actions.Picklock
 import actions.Unlock
 
@@ -11,13 +12,13 @@ class Locked(private val check: (Locked, Thing) -> Boolean): Attribute("locked",
     override fun actOn(verb: Verb, owner: Thing):Consequence? {
         when (verb.action) {
             is Unlock -> {
-                if(check.invoke(this, owner)) {
-                    return Consequence {
+                return if(check.invoke(this, owner)) {
+                    Consequence {
                         owner.attributes.remove(this)
                         println("You unlock the ${owner.name}")
                     }
                 } else {
-                    return Consequence {
+                    Consequence {
                         println("You cannot open the lock")
                     }
                 }
@@ -30,6 +31,18 @@ class Locked(private val check: (Locked, Thing) -> Boolean): Attribute("locked",
             }
             else -> {
                 return null
+            }
+        }
+    }
+
+    override fun intercepts(verb: Verb, owner: Thing):Consequence? {
+        return when(verb.action) {
+            is Open -> {
+                Consequence {
+                    println("The door is locked")
+                }
+            } else -> {
+                null
             }
         }
     }
