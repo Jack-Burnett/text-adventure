@@ -1,6 +1,7 @@
 package attributes
 
 import Classification
+import Consequence
 import Thing
 import Verb
 
@@ -13,5 +14,5 @@ open abstract class Attribute(
         return name
     }
 
-    open fun actOn(verb: Verb, owner: Thing){}
+    open fun actOn(verb: Verb, owner: Thing):Consequence? { return null}
 }

@@ -1,7 +1,4 @@
-import actions.Break
-import actions.Close
-import actions.Open
-import actions.Paint
+import actions.*
 import attributes.Attribute
 import attributes.Coloured
 import attributes.Locked
@@ -43,6 +40,7 @@ fun main() {
     val open = Open()
     val close = Close()
     val paint = Paint(Colour.RED)
+    val unlock = Unlock()
 
     val verbManager = VerbManager()
     verbManager.insert(destroy,  listOf(
@@ -59,11 +57,14 @@ fun main() {
     verbManager.insert(paint,  listOf(
         VerbManager.VerbDefinition("paint", "paint")
     ))
+    verbManager.insert(unlock,  listOf(
+        VerbManager.VerbDefinition("unlocked", "unlock")
+    ))
 
     val door = Thing("door", mutableListOf(
         Coloured(Colour.RED),
         Sealable(Sealable.State.CLOSED),
-        Locked { (locked:Locked, thing:Thing) -> true }))
+        Locked { locked:Locked, thing:Thing -> true }))
 
     val chest = Thing("chest", mutableListOf(Coloured(Colour.BLUE), Sealable(Sealable.State.CLOSED)))
     val gate = Thing("gate", mutableListOf(Coloured(Colour.GREEN), Sealable(Sealable.State.OPEN)))
@@ -97,7 +98,12 @@ fun main() {
                 val verb = verbs[0]
                 val subject = subjects[0]
 
-                verb.action.apply(subject, verb)
+                val consequence:Consequence? = verb.action.apply(subject, verb)
+                if(consequence != null) {
+                    consequence.action.invoke()
+                } else {
+                    println("Nothing happened")
+                }
 
             } else {
                 println("I don't know how to $line")
@@ -111,6 +117,6 @@ class Thing(val name:String, val attributes:MutableList<Attribute>) {
 }
 
 
-class Consequence {
+class Consequence(val action : () -> Unit) {
 
 }

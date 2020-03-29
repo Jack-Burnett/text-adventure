@@ -1,16 +1,16 @@
 import actions.Action
 
 class VerbManager {
-    private val verbs = mutableMapOf<String, `Verb.kt`>()
+    private val verbs = mutableMapOf<String, Verb>()
 
     fun insert(action: Action, synonyms:List<VerbDefinition>) {
         for(def in synonyms) {
-            val verb = `Verb.kt`(def.pastTense, def.presentTense, action)
+            val verb = Verb(def.pastTense, def.presentTense, action)
             verbs[def.presentTense] = verb
         }
     }
 
-    fun resolveToVerb(string:String): `Verb.kt`? {
+    fun resolveToVerb(string:String): Verb? {
         val string = string.toLowerCase()
         return verbs[string]
     }
