@@ -5,12 +5,12 @@ import attributes.*
 import kotlin.streams.toList
 
 class Core(val world:World) {
-    val verbManager = VerbManager()
-    val actionManager = ActionManager()
+    private val verbManager = VerbManager()
+    private val actionManager = ActionManager()
 
     fun describe(thing:Thing):String {
         val sorted = thing.attributes.sortedBy { a: Attribute -> a.classification }
-        val description = sorted.stream().map { a -> a.description()}.toList().filterNotNull().joinToString { a -> a }
+        val description = sorted.stream().map { a -> a.description()}.toList().filterNotNull().distinct().joinToString()
         return (description + " " + thing.name)
     }
 
