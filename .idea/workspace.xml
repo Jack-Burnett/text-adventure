@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9359e08-072d-45b4-9ad5-ff6737e39407" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/definitions/Enter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/areas/Area.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/areas/Connection.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/attributes/Connects.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/attributes/Contains.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$$inlined$sortedBy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$$inlined$sortedBy$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core$World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$description$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$description$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$main$door$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/MainKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/SmallItem$actOn$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/SmallItem$actOn$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/ActionName.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/ActionName.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/VerbManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/VerbManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attributes/Attribute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Attribute.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attributes/Coloured.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Coloured.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attributes/Colours.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Colours.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attributes/Connects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Connects.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/Sealable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Sealable.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/SmallItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/SmallItem.kt" afterDir="false" />
     </list>
@@ -131,22 +122,22 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="547" y="291" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.870@0.0.1600.870" timestamp="1585589409655" />
-    <state width="1557" height="167" key="GridCell.Tab.0.bottom" timestamp="1585596197148">
+    <state width="1557" height="167" key="GridCell.Tab.0.bottom" timestamp="1585601313471">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="167" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1585596197148" />
-    <state width="1557" height="167" key="GridCell.Tab.0.center" timestamp="1585596197147">
+    <state width="1557" height="167" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1585601313471" />
+    <state width="1557" height="167" key="GridCell.Tab.0.center" timestamp="1585601313470">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="167" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1585596197147" />
-    <state width="1557" height="167" key="GridCell.Tab.0.left" timestamp="1585596197147">
+    <state width="1557" height="167" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1585601313470" />
+    <state width="1557" height="167" key="GridCell.Tab.0.left" timestamp="1585601313470">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="167" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1585596197147" />
-    <state width="1557" height="167" key="GridCell.Tab.0.right" timestamp="1585596197147">
+    <state width="1557" height="167" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1585601313470" />
+    <state width="1557" height="167" key="GridCell.Tab.0.right" timestamp="1585601313471">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="167" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1585596197147" />
+    <state width="1557" height="167" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1585601313471" />
     <state x="501" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1585588793329">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

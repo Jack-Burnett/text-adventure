@@ -15,8 +15,8 @@ class Connects(private var connection: Connection) : Attribute("connection",
     Classification.STATE
 ) {
 
-    override fun toString(): String {
-        return ""
+    override fun description(): String? {
+        return null
     }
 
     override fun actOn(actionDetails: ActionDetails):Consequence? {

@@ -12,7 +12,7 @@ class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
         OPEN, CLOSED
     }
 
-    override fun toString(): String {
+    override fun description(): String {
         return state.toString().toLowerCase()
     }
 

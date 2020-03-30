@@ -12,7 +12,7 @@ abstract class Attribute(
     val classification: Classification
 ) {
 
-    override fun toString(): String {
+    open fun description(): String? {
         return name
     }
 

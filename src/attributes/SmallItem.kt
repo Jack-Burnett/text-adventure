@@ -14,7 +14,7 @@ class SmallItem() : Attribute("small",
     Classification.SIZE
 ) {
 
-    override fun toString(): String {
+    override fun description(): String {
         return "small"
     }
 

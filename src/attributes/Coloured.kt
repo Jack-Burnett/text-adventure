@@ -13,7 +13,7 @@ class Coloured(private var state: Colour) : Attribute("colour",
     Classification.COLOUR
 ) {
 
-    override fun toString(): String {
+    override fun description(): String {
         return state.toString().toLowerCase()
     }
 

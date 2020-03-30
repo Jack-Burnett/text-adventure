@@ -10,7 +10,7 @@ class Core(val world:World) {
 
     fun describe(thing:Thing):String {
         val sorted = thing.attributes.sortedBy { a: Attribute -> a.classification }
-        val description = sorted.joinToString { a -> a.toString() }
+        val description = sorted.stream().map { a -> a.description()}.toList().filterNotNull().joinToString { a -> a }
         return (description + " " + thing.name)
     }
 
@@ -92,8 +92,6 @@ class Core(val world:World) {
                     }
                 }
 
-                println(verbs)
-                println(subjects)
                 if(verbs.size == 1 && subjects.size == 1) {
                     val verb = verbs[0]
                     val subject = subjects[0]
