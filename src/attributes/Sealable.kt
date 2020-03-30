@@ -5,6 +5,7 @@ import Consequence
 import actions.definitions.Close
 import actions.definitions.Open
 import actions.ActionDetails
+import actions.definitions.Enter
 
 class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
     enum class State {
@@ -32,6 +33,22 @@ class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
             }
             else -> {
                 return null
+            }
+        }
+    }
+
+    override fun intercepts(actionDetails:ActionDetails):Consequence? {
+        return when(actionDetails.action) {
+            is Enter -> {
+                if(state == State.CLOSED) {
+                    return Consequence {
+                        println("The ${actionDetails.subject.name} is closed")
+                    }
+                } else {
+                    return null
+                }
+            } else -> {
+                null
             }
         }
     }

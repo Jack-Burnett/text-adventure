@@ -1,14 +1,12 @@
 import actions.*
 import actions.definitions.*
+import areas.Connection
 import attributes.*
 import kotlin.streams.toList
 
-class Core {
+class Core(val world:World) {
     val verbManager = VerbManager()
     val actionManager = ActionManager()
-    val context = mutableListOf<Thing>()
-
-    val heldItems = mutableListOf<Thing>()
 
     fun describe(thing:Thing):String {
         val sorted = thing.attributes.sortedBy { a: Attribute -> a.classification }
@@ -16,7 +14,7 @@ class Core {
         return (description + " " + thing.name)
     }
 
-    fun describe(context:List<Thing>) {
+    fun describe(context:Set<Thing>) {
         var fullDescription = "You see "
         fullDescription += context.stream()
             .map { thing -> describe(thing) }
@@ -40,27 +38,30 @@ class Core {
 
     }
 
+    class World(var currentArea:Area, val areas:List<Area>, val connections:List<Connection>) {
+        val heldItems = mutableListOf<Thing>()
+
+        fun getContext():Set<Thing> {
+            return connections.stream()
+                .filter { con -> con.area1 == currentArea || con.area2 == currentArea}
+                .flatMap { con -> con.barriers.stream() }
+                .toList().union(currentArea.contains)
+        }
+    }
+
     fun main() {
 
-        val door = Thing("door", mutableListOf(
-            Coloured(Colour.RED),
-            Sealable(Sealable.State.CLOSED),
-            Locked { locked:Locked, thing:Thing -> true }))
-
-        val chest = Thing("chest", mutableListOf(Coloured(Colour.BLUE), Sealable(Sealable.State.CLOSED)))
-        val gate = Thing("gate", mutableListOf(Coloured(Colour.GREEN), Sealable(Sealable.State.OPEN)))
-        val redPaint = Thing("paintpot", mutableListOf(Coloured(Colour.RED), Colours(Colour.RED), SmallItem()))
-
-        context.addAll(listOf(door, chest, gate, redPaint))
-
         while(true) {
+            val context = world.getContext()
+
             actionManager.reset()
             actionManager.add(Break())
             actionManager.add(Open())
             actionManager.add(Close())
             actionManager.add(Pickup())
+            actionManager.add(Enter())
 
-            for(item in this.heldItems) {
+            for(item in this.world.heldItems) {
                 for(attr in item.attributes) {
                     actionManager.addAll(attr.grantActions())
                 }
@@ -69,7 +70,7 @@ class Core {
             //actionManager.add(Unlock())
 
 
-            describe(context)
+            describe(world.getContext())
 
             val line:String? = readLine()
             if(line != null) {
@@ -83,7 +84,7 @@ class Core {
                         verbs.add(verb)
                     }
 
-                    for(item in context) {
+                    for(item in world.getContext()) {
                         if(item.name == word) {
                             subjects.add(item)
                             break
@@ -91,6 +92,8 @@ class Core {
                     }
                 }
 
+                println(verbs)
+                println(subjects)
                 if(verbs.size == 1 && subjects.size == 1) {
                     val verb = verbs[0]
                     val subject = subjects[0]
