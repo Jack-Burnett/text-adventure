@@ -34,10 +34,6 @@ class Core(val world:World) {
         println(fullDescription)
     }
 
-    fun init() {
-
-    }
-
     class World(var currentArea:Area, val areas:List<Area>, val connections:List<Connection>) {
         val heldItems = mutableListOf<Thing>()
 
@@ -66,9 +62,6 @@ class Core(val world:World) {
                     actionManager.addAll(attr.grantActions())
                 }
             }
-            //actionManager.add(Paint(Colour.RED))
-            //actionManager.add(Unlock())
-
 
             describe(world.getContext())
 

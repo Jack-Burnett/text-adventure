@@ -52,4 +52,5 @@ class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
             }
         }
     }
+
 }
