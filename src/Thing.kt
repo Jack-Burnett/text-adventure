@@ -9,4 +9,8 @@ class Thing(val name:String, val attributes:MutableList<Attribute>) {
         val description = sorted.stream().map { a -> a.description()}.toList().filterNotNull().distinct().joinToString()
         return (description + " " + this.name)
     }
+
+    override fun equals(other: Any?): Boolean {
+        return super.equals(other)
+    }
 }

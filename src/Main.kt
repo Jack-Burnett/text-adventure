@@ -5,8 +5,9 @@ fun main() {
 
     val door = Thing("door", mutableListOf(
         Coloured(Colour.RED),
-        Sealable(Sealable.State.OPEN),
-        Locked { locked: Locked, thing:Thing -> true }))
+        Sealable(Sealable.State.OPEN)//,
+        //Locked { locked: Locked, thing:Thing -> true }
+    ))
 
     val chest = Thing("chest", mutableListOf(Coloured(Colour.BLUE), Sealable(Sealable.State.CLOSED)))
     val redPaint = Thing("paintpot", mutableListOf(Coloured(Colour.RED), Colours(Colour.RED), SmallItem()))

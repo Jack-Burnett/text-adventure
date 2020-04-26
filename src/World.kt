@@ -6,11 +6,13 @@ import context.ContextSetRoom
 import world.Connection
 import kotlin.streams.toList
 
-class World(var currentArea:Area, val areas:List<Area>, val connections:List<Connection>) {
+class World(var currentArea:Area, val areas:List<Area>, val connections:List<Connection>, val core:Core) {
     var heldItems = mutableListOf<Thing>()
 
+
+
     fun getThingsInArea():Set<Thing> {
-        return _thingsInCurrentArea().union(_barriersInCurrentArea())
+        return _thingsInCurrentArea().union(_barriersInArea(currentArea))
     }
     fun getThingsInAreaAndContained():Set<Thing> {
         val things = getThingsInArea()
@@ -21,12 +23,22 @@ class World(var currentArea:Area, val areas:List<Area>, val connections:List<Con
     private fun _thingsInCurrentArea() : Set<Thing> {
         return currentArea.contains.toSet()
     }
-    private fun _barriersInCurrentArea() : Set<Thing> {
+
+    private fun _barriersInArea(area: Area) : Set<Thing> {
         return connections.stream()
-            .filter { con -> con.area1 == currentArea || con.area2 == currentArea}
+            .filter { con -> con.area1 == area || con.area2 == area }
             .flatMap { con -> con.barriers.stream() }
             .toList().toSet()
     }
+
+    private fun reachableAreas(area:Area) : Set<Area> {
+        return connections.stream()
+            .filter { con -> con.area1 == area || con.area2 == area }
+            .filter { con -> con.isTraversable(this.core) }
+            .map { con -> if (con.area1 == area) con.area2 else con.area1 }
+            .toList().toSet()
+    }
+
     private fun _thingsInThings(things : Set<Thing>) : MutableSet<Thing> {
         return things.stream()
             .flatMap { thing ->
