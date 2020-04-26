@@ -1,54 +1,17 @@
 import actions.*
 import actions.definitions.*
-import areas.Connection
 import attributes.*
 import kotlin.streams.toList
 
 class Core(val world:World) {
     private val verbManager = VerbManager()
     private val actionManager = ActionManager()
-
-    fun describe(thing:Thing):String {
-        val sorted = thing.attributes.sortedBy { a: Attribute -> a.classification }
-        val description = sorted.stream().map { a -> a.description()}.toList().filterNotNull().distinct().joinToString()
-        return (description + " " + thing.name)
-    }
-
-    fun describe(context:Set<Thing>) {
-        var fullDescription = "You see "
-        fullDescription += context.stream()
-            .map { thing -> describe(thing) }
-            .map { description ->
-                val newDescription = if (description.matches(Regex("^[aeiou].*"))) {
-                    "an $description"
-                } else {
-                    "a $description"
-                }
-                newDescription
-            }
-            .toList().joinToString(" and ")
-        val index = fullDescription.lastIndexOf(" and ")
-        if(index >= 0) {
-            fullDescription = fullDescription.replaceRange(index..index+4, " and ")
-        }
-        println(fullDescription)
-    }
-
-    class World(var currentArea:Area, val areas:List<Area>, val connections:List<Connection>) {
-        val heldItems = mutableListOf<Thing>()
-
-        fun getContext():Set<Thing> {
-            return connections.stream()
-                .filter { con -> con.area1 == currentArea || con.area2 == currentArea}
-                .flatMap { con -> con.barriers.stream() }
-                .toList().union(currentArea.contains)
-        }
-    }
+    private val contextManager = ContextManager(world)
 
     fun main() {
 
         while(true) {
-            val context = world.getContext()
+            val context = contextManager.getThingsInAreaAndContained()
 
             actionManager.reset()
             actionManager.add(Break())
@@ -63,7 +26,7 @@ class Core(val world:World) {
                 }
             }
 
-            describe(world.getContext())
+            contextManager.describe()
 
             val line:String? = readLine()
             if(line != null) {
@@ -77,7 +40,7 @@ class Core(val world:World) {
                         verbs.add(verb)
                     }
 
-                    for(item in world.getContext()) {
+                    for(item in context) {
                         if(item.name == word) {
                             subjects.add(item)
                             break

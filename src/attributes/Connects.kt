@@ -1,15 +1,10 @@
 package attributes
 
 import Classification
-import Colour
 import Consequence
-import actions.definitions.Paint
-import Thing
-import actions.Action
 import actions.ActionDetails
-import actions.Verb
 import actions.definitions.Enter
-import areas.Connection
+import world.Connection
 
 class Connects(private var connection: Connection) : Attribute("connection",
     Classification.STATE

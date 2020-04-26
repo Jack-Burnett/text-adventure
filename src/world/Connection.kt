@@ -1,4 +1,4 @@
-package areas
+package world
 
 import Area
 import Thing

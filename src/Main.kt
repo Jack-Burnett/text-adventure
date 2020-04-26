@@ -1,4 +1,4 @@
-import areas.Connection
+import world.Connection
 import attributes.*
 
 fun main() {
@@ -17,6 +17,6 @@ fun main() {
 
     val connection = Connection(room1, room2, mutableListOf(door))
 
-    val world = Core.World(room1, listOf(room1, room2), listOf(connection))
+    val world = World(room1, listOf(room1, room2), listOf(connection))
     Core(world).main()
 }

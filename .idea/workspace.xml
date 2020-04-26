@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9359e08-072d-45b4-9ad5-ff6737e39407" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ContextManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/World.kt.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$World$getContext$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core$World$getContext$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$World$getContext$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core$World$getContext$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core$World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core$describe$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/Core.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/Core.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Attribute.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Attribute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$actOn$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$actOn$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$actOn$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$actOn$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$intercepts$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable$intercepts$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/attributes/Sealable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attributes/Attribute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Attribute.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/areas/Area.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/world/Area.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/areas/Connection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/world/Connection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attributes/Connects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Connects.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/Contains.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Contains.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,10 +95,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="254" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.870@0.0.1600.870" timestamp="1585410483379" />
-    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1587313321780">
+    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1587900427023">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870@0.0.1600.870" timestamp="1587313321780" />
+    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870@0.0.1600.870" timestamp="1587900427023" />
     <state x="525" y="210" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1585492684967">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -116,10 +111,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="593" y="270" key="#com.intellij.refactoring.move.moveInner.MoveInnerDialog/0.0.1600.870@0.0.1600.870" timestamp="1585501412751" />
-    <state x="432" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585492509324">
+    <state x="432" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587902167786">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="432" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.870@0.0.1600.870" timestamp="1585492509324" />
+    <state x="432" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.870@0.0.1600.870" timestamp="1587902167786" />
     <state x="574" y="87" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1585501376269">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -132,22 +127,22 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="547" y="291" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.870@0.0.1600.870" timestamp="1585589409655" />
-    <state width="1557" height="167" key="GridCell.Tab.0.bottom" timestamp="1587313933594">
+    <state width="1557" height="167" key="GridCell.Tab.0.bottom" timestamp="1587903692729">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="167" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1587313933594" />
-    <state width="1557" height="167" key="GridCell.Tab.0.center" timestamp="1587313933594">
+    <state width="1557" height="167" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1587903692729" />
+    <state width="1557" height="167" key="GridCell.Tab.0.center" timestamp="1587903692728">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="167" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1587313933594" />
-    <state width="1557" height="167" key="GridCell.Tab.0.left" timestamp="1587313933593">
+    <state width="1557" height="167" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1587903692728" />
+    <state width="1557" height="167" key="GridCell.Tab.0.left" timestamp="1587903692728">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="167" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1587313933593" />
-    <state width="1557" height="167" key="GridCell.Tab.0.right" timestamp="1587313933594">
+    <state width="1557" height="167" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1587903692728" />
+    <state width="1557" height="167" key="GridCell.Tab.0.right" timestamp="1587903692728">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1557" height="167" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1587313933594" />
+    <state width="1557" height="167" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1587903692728" />
     <state x="501" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1587311234826">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -160,9 +155,9 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1585595712408" />
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1587894856712">
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1587900431045">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1587894856712" />
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1587900431045" />
   </component>
 </project>
