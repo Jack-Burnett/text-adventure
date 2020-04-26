@@ -1,4 +1,8 @@
 import attributes.Contains
+import context.ContextManager
+import context.ContextSet
+import context.ContextSetEntry
+import context.ContextSetRoom
 import world.Connection
 import kotlin.streams.toList
 
@@ -35,7 +39,7 @@ class World(var currentArea:Area, val areas:List<Area>, val connections:List<Con
             .toList().toMutableSet()
     }
 
-    fun describe() {
+    fun describe(contextManager:ContextManager) {
         val context = getThingsInArea()
 
         var fullDescription = "You see "
@@ -55,5 +59,9 @@ class World(var currentArea:Area, val areas:List<Area>, val connections:List<Con
             fullDescription = fullDescription.replaceRange(index..index+4, " and ")
         }
         println(fullDescription)
+
+        contextManager.publishContext(
+            ContextSetRoom(currentArea, context.stream().map { thing -> ContextSetEntry(thing) }.toList().toSet())
+        )
     }
 }

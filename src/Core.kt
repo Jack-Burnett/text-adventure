@@ -1,6 +1,7 @@
 import actions.*
 import actions.definitions.*
 import context.ContextManager
+import context.ContextSetEntry
 
 class Core(val world:World) {
     private val verbManager = VerbManager()
@@ -25,26 +26,21 @@ class Core(val world:World) {
                 }
             }
 
-            world.describe()
+            world.describe(contextManager)
 
             val line:String? = readLine()
             if(line != null) {
                 val words = line.split(" ")
 
                 val verbs = mutableListOf<Verb>()
-                val subjects = mutableListOf<Thing>()
+                val subjects = mutableListOf<ContextSetEntry>()
                 for(word in words) {
                     val verb = verbManager.resolveToVerb(word)
                     if(verb != null) {
                         verbs.add(verb)
                     }
 
-                    for(item in context) {
-                        if(item.name == word) {
-                            subjects.add(item)
-                            break
-                        }
-                    }
+                    subjects.addAll(contextManager.resolveNoun(word))
                 }
 
                 if(verbs.size == 1 && subjects.size == 1) {
@@ -55,7 +51,7 @@ class Core(val world:World) {
                     if(actions.isEmpty()) {
                         println("I am unable to ${verb.presentTense}")
                     } else {
-                        val actionDetails = ActionDetails(actions[0], verb, subject, this)
+                        val actionDetails = ActionDetails(actions[0], verb, subject.thing, this)
                         val consequence:Consequence? = actions[0].apply(actionDetails)
                         if(consequence != null) {
                             consequence.action.invoke()

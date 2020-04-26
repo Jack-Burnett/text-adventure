@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9359e08-072d-45b4-9ad5-ff6737e39407" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/context/ContextSet.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/ContextSetEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/ContextSetRoom.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContextManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/ContextManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thing.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World.kt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/ContextManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/ContextManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/ContextSet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/ContextSet.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/ContextSetRoom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/ContextSetRoom.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
