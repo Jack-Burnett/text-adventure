@@ -6,6 +6,7 @@ import Thing
 import actions.Action
 import actions.ActionDetails
 import actions.Verb
+import actions.definitions.Paint
 
 abstract class Attribute(
     private val name: String,
@@ -20,8 +21,8 @@ abstract class Attribute(
 
     open fun intercepts(details:ActionDetails):Consequence? { return null}
 
+    open fun grantActions(): List<Action> {
+        return listOf()
+    }
+
 }
-
-
-maybe attributes can mask other attributes entirely instead of just blocking them...
-        but the error messages would be bad?
