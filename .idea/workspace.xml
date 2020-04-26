@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9359e08-072d-45b4-9ad5-ff6737e39407" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/context/ContextSet.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/ContextSetEntry.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/ContextSetRoom.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContextManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/ContextManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Thing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World.kt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -36,12 +42,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="context" />
       <recent name="actions" />
       <recent name="actions.definitions" />
       <recent name="" />
       <recent name="attributes" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="context" />
+      <recent name="world" />
       <recent name="actions.definitions" />
       <recent name="attributes" />
       <recent name="actions" />
@@ -88,10 +97,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="254" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.870@0.0.1600.870" timestamp="1585410483379" />
-    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1587900427023">
+    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1587906059035">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870@0.0.1600.870" timestamp="1587900427023" />
+    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870@0.0.1600.870" timestamp="1587906059035" />
     <state x="525" y="210" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1585492684967">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -108,10 +117,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="432" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.870@0.0.1600.870" timestamp="1587902167786" />
-    <state x="574" y="87" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1585501376269">
+    <state x="574" y="87" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1587904206777">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="574" y="87" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1600.870@0.0.1600.870" timestamp="1585501376269" />
+    <state x="574" y="87" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1600.870@0.0.1600.870" timestamp="1587904206777" />
     <state x="664" y="360" key="#org.jetbrains.kotlin.idea.refactoring.move.moveTopLevelDeclarations.ui.KotlinSelectInnerOrMembersRefactoringDialog" timestamp="1585501406334">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -148,9 +157,9 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1585595712408" />
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1587900431045">
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1587906062365">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1587900431045" />
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1587906062365" />
   </component>
 </project>

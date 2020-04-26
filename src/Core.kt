@@ -1,7 +1,6 @@
 import actions.*
 import actions.definitions.*
-import attributes.*
-import kotlin.streams.toList
+import context.ContextManager
 
 class Core(val world:World) {
     private val verbManager = VerbManager()
@@ -11,7 +10,7 @@ class Core(val world:World) {
     fun main() {
 
         while(true) {
-            val context = contextManager.getThingsInAreaAndContained()
+            val context = world.getThingsInAreaAndContained()
 
             actionManager.reset()
             actionManager.add(Break())
@@ -26,7 +25,7 @@ class Core(val world:World) {
                 }
             }
 
-            contextManager.describe()
+            world.describe()
 
             val line:String? = readLine()
             if(line != null) {
