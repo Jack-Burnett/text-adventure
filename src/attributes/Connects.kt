@@ -18,10 +18,10 @@ class Connects(private var connection: Connection) : Attribute("connection",
         return when (actionDetails.action) {
             is Enter -> {
                 Consequence {
-                    if(actionDetails.core.world.currentArea == connection.area1) {
-                        actionDetails.core.world.currentArea = connection.area2
+                    if(actionDetails.world.currentArea == connection.area1) {
+                        actionDetails.world.currentArea = connection.area2
                     } else {
-                        actionDetails.core.world.currentArea = connection.area1
+                        actionDetails.world.currentArea = connection.area1
                     }
                     println("You go through the  ${actionDetails.subject.name}")
                 }

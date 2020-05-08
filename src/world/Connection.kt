@@ -1,7 +1,6 @@
 package world
 
 import Area
-import Core
 import Thing
 import World
 import actions.ActionDetails
@@ -18,10 +17,10 @@ class Connection(val area1:Area, val area2:Area, val barriers:MutableList<Thing>
     }
 
     // Used for pathfinding
-    fun isTraversable(core : Core):Boolean {
+    fun isTraversable(world : World):Boolean {
         var result = false
-        val realCurrentArea = core.world.currentArea
-        core.world.currentArea = area1
+        val realCurrentArea = world.currentArea
+        world.currentArea = area1
         for(barrier in barriers) {
             for(attribute in barrier.attributes) {
                 if(attribute is Connects) {
@@ -29,7 +28,7 @@ class Connection(val area1:Area, val area2:Area, val barriers:MutableList<Thing>
                         Enter(),
                         Verb("", "", ActionName.ENTER),
                         barrier,
-                        core
+                        world
                     )
                     if(attribute.actOn(action) != null) {
                         result = true
@@ -37,11 +36,7 @@ class Connection(val area1:Area, val area2:Area, val barriers:MutableList<Thing>
                 }
             }
         }
-        core.world.currentArea = realCurrentArea
+        world.currentArea = realCurrentArea
         return result
-    }
-
-    override fun hashCode(): Int {
-        return super.hashCode()
     }
 }

@@ -52,7 +52,7 @@ class Core(val world:World) {
                         println("I am unable to ${verb.presentTense}")
                     } else {
 
-                        val actionDetails = ActionDetails(actions[0], verb, subject.thing, this)
+                        val actionDetails = ActionDetails(actions[0], verb, subject.thing, world)
                         val consequence:Consequence? = actions[0].apply(actionDetails)
                         if(consequence != null) {
                             consequence.action.invoke()

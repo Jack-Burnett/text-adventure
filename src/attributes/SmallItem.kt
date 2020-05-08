@@ -1,13 +1,8 @@
 package attributes
 
 import Classification
-import Colour
 import Consequence
-import actions.definitions.Paint
-import Thing
-import actions.Action
 import actions.ActionDetails
-import actions.Verb
 import actions.definitions.Pickup
 
 class SmallItem() : Attribute("small",
@@ -22,8 +17,8 @@ class SmallItem() : Attribute("small",
         return when (actionDetails.action) {
             is Pickup -> {
                 Consequence {
-                    actionDetails.core.world.heldItems.add(actionDetails.subject)
-                    actionDetails.core.world.currentArea.contains.remove(actionDetails.subject)
+                    actionDetails.world.heldItems.add(actionDetails.subject)
+                    actionDetails.world.currentArea.contains.remove(actionDetails.subject)
 
                     println("You take the ${actionDetails.subject.name}")
                 }

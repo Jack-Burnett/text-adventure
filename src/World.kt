@@ -1,12 +1,11 @@
 import attributes.Contains
 import context.ContextManager
-import context.ContextSet
 import context.ContextSetEntry
 import context.ContextSetRoom
 import world.Connection
 import kotlin.streams.toList
 
-class World(var currentArea:Area, val areas:List<Area>, val connections:List<Connection>, val core:Core) {
+class World(var currentArea:Area, val areas:List<Area>, val connections:List<Connection>) {
     var heldItems = mutableListOf<Thing>()
 
 
@@ -31,10 +30,10 @@ class World(var currentArea:Area, val areas:List<Area>, val connections:List<Con
             .toList().toSet()
     }
 
-    private fun reachableAreas(area:Area) : Set<Area> {
+    fun reachableAreas(area:Area) : Set<Area> {
         return connections.stream()
             .filter { con -> con.area1 == area || con.area2 == area }
-            .filter { con -> con.isTraversable(this.core) }
+            .filter { con -> con.isTraversable(this) }
             .map { con -> if (con.area1 == area) con.area2 else con.area1 }
             .toList().toSet()
     }
