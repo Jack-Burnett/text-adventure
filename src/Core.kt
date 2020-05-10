@@ -2,6 +2,8 @@ import actions.*
 import actions.definitions.*
 import context.ContextManager
 import context.ContextSetEntry
+import world.Area
+import java.lang.RuntimeException
 
 class Core(val world:World) {
     private val verbManager = VerbManager()
@@ -43,11 +45,15 @@ class Core(val world:World) {
 
                     subjects.addAll(contextManager.resolveNoun(word))
                 }
-                println("subjects $subjects")
 
                 if(verbs.size == 1 && subjects.size == 1) {
                     val verb = verbs[0]
                     val subject = subjects[0]
+
+                    if(!canAccess(subject.thing)) {
+                        println("I am unable to access $subject.thing")
+                        continue
+                    }
 
                     val actions:List<Action> = actionManager.actions(verb.action)
                     if(actions.isEmpty()) {
@@ -68,6 +74,32 @@ class Core(val world:World) {
                 }
             }
         }
+    }
+
+    fun canAccess(sub:Thing) : Boolean {
+        var subject = sub
+        while(true) {
+            var parent : Parent? = subject.getParent()
+            if(parent == null) {
+                println("PREVENT SUBJECT")
+                return false
+            }
+            if(!parent.isAccessible(subject)) {
+                println("PREVENT INACCESSIBLE")
+                return false
+            }
+            if(parent is Area) {
+                println("PREVENT AREA")
+                return parent == world.currentArea
+            } else
+            if(parent is Thing) {
+                subject = parent
+            } else {
+                throw RuntimeException()
+            }
+
+        }
+
     }
 
     override fun hashCode(): Int {

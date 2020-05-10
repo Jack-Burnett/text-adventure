@@ -2,6 +2,7 @@ package attributes
 
 import Classification
 import Consequence
+import Parent
 import actions.ActionDetails
 import actions.definitions.Pickup
 
@@ -17,10 +18,15 @@ class SmallItem() : Attribute("small",
         return when (actionDetails.action) {
             is Pickup -> {
                 Consequence {
-                    it.world.heldItems.add(actionDetails.subject)
-                    it.world.currentArea.contains.remove(actionDetails.subject)
+                    val parent:Parent? = actionDetails.subject.getParent()
+                    if (parent != null) {
+                        parent.removeChild(actionDetails.subject)
+                        it.world.heldItems.add(actionDetails.subject)
+                        println("You take the ${actionDetails.subject.name}")
+                    } else {
+                        println("UNABLE TO TAKE ITEM")
+                    }
 
-                    println("You take the ${actionDetails.subject.name}")
                 }
             } else -> {
                 null

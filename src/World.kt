@@ -2,10 +2,11 @@ import attributes.Contains
 import context.ContextManager
 import context.ContextSetEntry
 import context.ContextSetRoom
+import world.Area
 import world.Connection
 import kotlin.streams.toList
 
-class World(var currentArea:Area, val areas:List<Area>, val connections:List<Connection>) {
+class World(var currentArea: Area, val areas:List<Area>, val connections:List<Connection>) {
     var heldItems = mutableListOf<Thing>()
 
 
@@ -20,7 +21,7 @@ class World(var currentArea:Area, val areas:List<Area>, val connections:List<Con
     }
 
     private fun _thingsInCurrentArea() : Set<Thing> {
-        return currentArea.contains.toSet()
+        return currentArea.things()
     }
 
     private fun _barriersInArea(area: Area) : Set<Thing> {
@@ -30,7 +31,7 @@ class World(var currentArea:Area, val areas:List<Area>, val connections:List<Con
             .toList().toSet()
     }
 
-    fun reachableAreas(area:Area) : Set<Area> {
+    fun reachableAreas(area: Area) : Set<Area> {
         return connections.stream()
             .filter { con -> con.area1 == area || con.area2 == area }
             .filter { con -> con.isTraversable(this) }
@@ -44,7 +45,7 @@ class World(var currentArea:Area, val areas:List<Area>, val connections:List<Con
                 thing.attributes.stream()
                     .filter { attr -> attr is Contains }
                     .map { attr ->  attr as Contains }
-                    .flatMap { attr -> attr.contents().stream() }
+                    .flatMap { attr -> attr.list().stream() }
                     .toList().toMutableList().stream()
             }
             .toList().toMutableSet()

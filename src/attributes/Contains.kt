@@ -8,8 +8,7 @@ import context.ContextSetEntry
 import context.ContextSetRoom
 import kotlin.streams.toList
 
-class Contains(contents:MutableList<Thing>) : SuperContainer("contains", contents
-) {
+class Contains : SuperContainer("contains") {
 
     override fun toString(): String {
         return "full"

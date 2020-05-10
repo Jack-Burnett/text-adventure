@@ -2,10 +2,12 @@ package attributes
 
 import Classification
 import Consequence
+import Thing
 import actions.definitions.Close
 import actions.definitions.Open
 import actions.ActionDetails
 import actions.definitions.Enter
+import actions.definitions.Look
 
 class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
     enum class State {
@@ -40,6 +42,15 @@ class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
     override fun intercepts(actionDetails:ActionDetails):Consequence? {
         return when(actionDetails.action) {
             is Enter -> {
+                if (state == State.CLOSED) {
+                    return Consequence {
+                        println("The ${actionDetails.subject.name} is closed")
+                    }
+                } else {
+                    return null
+                }
+            }
+            is Look -> {
                 if(state == State.CLOSED) {
                     return Consequence {
                         println("The ${actionDetails.subject.name} is closed")
@@ -49,6 +60,16 @@ class Sealable(var state:State) : Attribute("sealable", Classification.STATE) {
                 }
             } else -> {
                 null
+            }
+        }
+    }
+
+    override fun interceptsContents(container:Thing, contentsType:SuperContainer):Boolean {
+        return when(contentsType) {
+            is Contains -> {
+                return state == State.CLOSED
+            } else -> {
+                false
             }
         }
     }

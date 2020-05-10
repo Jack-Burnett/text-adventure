@@ -5,8 +5,6 @@ import Consequence
 import Thing
 import actions.Action
 import actions.ActionDetails
-import actions.Verb
-import actions.definitions.Paint
 
 abstract class Attribute(
     private val name: String,
@@ -17,11 +15,11 @@ abstract class Attribute(
         return name
     }
 
-    open fun actOn(details: ActionDetails):Consequence? { return null}
+    open fun actOn(actionDetails: ActionDetails):Consequence? { return null}
 
-    open fun intercepts(details:ActionDetails):Consequence? { return null}
+    open fun intercepts(actionDetails:ActionDetails):Consequence? { return null}
 
-    open fun interceptsContents(details:ActionDetails):Consequence? { return null}
+    open fun  interceptsContents(container:Thing, contentsType:SuperContainer):Boolean { return false}
 
     open fun grantActions(): List<Action> {
         return listOf()

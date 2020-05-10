@@ -2,22 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9359e08-072d-45b4-9ad5-ff6737e39407" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ConsequenceScope.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/definitions/Look.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/attributes/SuperContainer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/Static.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Parent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/attributes/ContainedIn.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Consequence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Consequence.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/ActionDetails.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/ActionDetails.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/ActionName.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/ActionName.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/VerbManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/VerbManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Thing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/Attribute.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Attribute.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attributes/Connects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Connects.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/Contains.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Contains.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attributes/Locked.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Locked.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attributes/Sealable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Sealable.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attributes/SmallItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/SmallItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attributes/SuperContainer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/SuperContainer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/ContextSetRoom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/ContextSetRoom.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/world/Area.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/world/Area.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/world/Connection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/world/Connection.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -106,10 +104,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="254" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.870@0.0.1600.870" timestamp="1585410483379" />
-    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1589107627612">
+    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1589119115090">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870@0.0.1600.870" timestamp="1589107627612" />
+    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870@0.0.1600.870" timestamp="1589119115090" />
     <state x="525" y="210" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1585492684967">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -138,22 +136,22 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="547" y="291" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.870@0.0.1600.870" timestamp="1585589409655" />
-    <state width="778" height="167" key="GridCell.Tab.0.bottom" timestamp="1589107893227">
+    <state width="778" height="167" key="GridCell.Tab.0.bottom" timestamp="1589121454105">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="778" height="167" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1589107893227" />
-    <state width="778" height="167" key="GridCell.Tab.0.center" timestamp="1589107893227">
+    <state width="778" height="167" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1589121454105" />
+    <state width="778" height="167" key="GridCell.Tab.0.center" timestamp="1589121454105">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="778" height="167" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1589107893227" />
-    <state width="778" height="167" key="GridCell.Tab.0.left" timestamp="1589107893227">
+    <state width="778" height="167" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1589121454105" />
+    <state width="778" height="167" key="GridCell.Tab.0.left" timestamp="1589121454105">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="778" height="167" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1589107893227" />
-    <state width="778" height="167" key="GridCell.Tab.0.right" timestamp="1589107893227">
+    <state width="778" height="167" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1589121454105" />
+    <state width="778" height="167" key="GridCell.Tab.0.right" timestamp="1589121454105">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="778" height="167" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1589107893227" />
+    <state width="778" height="167" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1589121454105" />
     <state x="501" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1587311234826">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -166,13 +164,13 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="643" y="207" key="refactoring.ChangeSignatureDialog/0.0.1600.870@0.0.1600.870" timestamp="1589107660717" />
-    <state x="456" y="198" key="run.anything.popup" timestamp="1587917329549">
+    <state x="456" y="198" key="run.anything.popup" timestamp="1589115617246">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1587917329549" />
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1589107631643">
+    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1589115617246" />
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1589112715296">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1589107631643" />
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1589112715296" />
   </component>
 </project>

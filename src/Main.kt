@@ -1,5 +1,6 @@
 import world.Connection
 import attributes.*
+import world.Area
 
 fun main() {
 
@@ -10,9 +11,8 @@ fun main() {
     ))
 
     val redPaint = Thing("paintpot", mutableListOf(Coloured(Colour.RED), Colours(Colour.RED), SmallItem()))
-    val chest = Thing("chest", mutableListOf(Coloured(Colour.BLUE), Sealable(Sealable.State.CLOSED),
-    Contains(mutableListOf(redPaint))))
-
+    val chest = Thing("chest", mutableListOf(Coloured(Colour.BLUE), Sealable(Sealable.State.OPEN)))
+    chest.attributes.add(Contains().add(redPaint, chest))
 
     val room1 = Area(mutableListOf(chest))
     val room2 = Area(mutableListOf())
