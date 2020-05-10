@@ -1,6 +1,9 @@
 CURRENT
-A table with stuff on
+A table with stuff on YES
+Gun YES
+A damage system i guess YES
 Working towards MVP of an office!
+BUG: Looks like doors cannae be targeted now
 
 LATER
 A* apparently

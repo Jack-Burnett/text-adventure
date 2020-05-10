@@ -3,7 +3,7 @@ package context
 import Thing
 import kotlin.streams.toList
 
-fun describe(things : List<Thing>)  :String {
+fun describe(things : Collection<Thing>)  :String {
     var fullDescription = things.stream()
         .map { thing -> thing.describe() }
         .map { description ->

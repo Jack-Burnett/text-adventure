@@ -14,7 +14,30 @@ fun main() {
     val chest = Thing("chest", mutableListOf(Coloured(Colour.BLUE), Sealable(Sealable.State.OPEN)))
     chest.attributes.add(Contains().add(redPaint, chest))
 
-    val room1 = Area(mutableListOf(chest))
+
+    val ash = Thing("ash", mutableListOf())
+    ash.attributes.add(
+        Coloured(Colour.GREY)
+    )
+
+    val ashtray = Thing("ashtray", mutableListOf())
+    ashtray.attributes.add(
+        Contains().add(ash, ashtray)
+    )
+
+    val gun = Thing("gun", mutableListOf(SmallItem()))
+    gun.attributes.add(
+        Shoots(6)
+    )
+
+    val desk = Thing("desk", mutableListOf(
+        Damageable(1, 2)
+    ))
+    desk.attributes.add(
+        Surface().add(ashtray, desk).add(gun, desk)
+    )
+
+    val room1 = Area(mutableListOf(desk))
     val room2 = Area(mutableListOf())
 
     val connection = Connection(room1, room2, mutableListOf(door))

@@ -8,7 +8,7 @@ abstract class SuperContainer(val name:String) : Attribute(name,
 ) {
     protected var contents:MutableList<Thing> = mutableListOf()
 
-    fun add(thing : Thing, owner:Thing) : Attribute {
+    fun add(thing : Thing, owner:Thing) : SuperContainer {
         contents.add(thing)
         thing.attributes.add(ContainedIn(owner))
 

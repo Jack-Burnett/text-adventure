@@ -1,10 +1,13 @@
 package actions
 
 import Consequence
-import Thing
 
 open class Action(val name: ActionName) {
     fun apply(actionDetails: ActionDetails):Consequence? {
+        val consequence = this.intercept(actionDetails)
+        if(consequence != null) {
+            return consequence
+        }
         for(att in actionDetails.subject.attributes) {
             val consequence:Consequence? = att.intercepts(actionDetails)
             if(consequence != null) {
@@ -17,6 +20,10 @@ open class Action(val name: ActionName) {
                 return consequence
             }
         }
+        return null
+    }
+
+    open fun intercept(actionDetails: ActionDetails):Consequence? {
         return null
     }
 }

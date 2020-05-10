@@ -31,6 +31,9 @@ class VerbManager {
         insert(ActionName.LOOK,  listOf(
             VerbDefinition("look", "look")
         ))
+        insert(ActionName.SHOOT,  listOf(
+            VerbDefinition("shot", "shoot")
+        ))
     }
 
     private fun insert(action: ActionName, synonyms:List<VerbDefinition>) {

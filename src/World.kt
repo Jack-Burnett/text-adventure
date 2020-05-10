@@ -52,28 +52,14 @@ class World(var currentArea: Area, val areas:List<Area>, val connections:List<Co
     }
 
     fun describe(contextManager:ContextManager) {
-        val context = getThingsInArea()
+        val things = getThingsInArea()
 
-        var fullDescription = "You see "
-        fullDescription += context.stream()
-            .map { thing -> thing.describe() }
-            .map { description ->
-                val newDescription = if (description.matches(Regex("^[aeiou].*"))) {
-                    "an $description"
-                } else {
-                    "a $description"
-                }
-                newDescription
-            }
-            .toList().joinToString(" and ")
-        val index = fullDescription.lastIndexOf(" and ")
-        if(index >= 0) {
-            fullDescription = fullDescription.replaceRange(index..index+4, " and ")
-        }
+        var fullDescription = "You see " + context.describe(things)
+
         println(fullDescription)
 
         contextManager.publishContext(
-            ContextSetRoom(currentArea, context.stream().map { thing -> ContextSetEntry(thing) }.toList().toSet())
+            ContextSetRoom(currentArea, things.stream().map { thing -> ContextSetEntry(thing) }.toList().toSet())
         )
     }
 }
