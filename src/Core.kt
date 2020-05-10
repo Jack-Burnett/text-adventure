@@ -51,7 +51,7 @@ class Core(val world:World) {
                     val subject = subjects[0]
 
                     if(!canAccess(subject.thing)) {
-                        println("I am unable to access $subject.thing")
+                        println("I am unable to access ${subject.thing.name}")
                         continue
                     }
 
@@ -81,15 +81,12 @@ class Core(val world:World) {
         while(true) {
             var parent : Parent? = subject.getParent()
             if(parent == null) {
-                println("PREVENT SUBJECT")
                 return false
             }
             if(!parent.isAccessible(subject)) {
-                println("PREVENT INACCESSIBLE")
                 return false
             }
             if(parent is Area) {
-                println("PREVENT AREA")
                 return parent == world.currentArea
             } else
             if(parent is Thing) {

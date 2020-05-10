@@ -11,10 +11,6 @@ class Thing(val name:String, val attributes:MutableList<Attribute>) : Parent {
         return (description + " " + this.name)
     }
 
-    override fun equals(other: Any?): Boolean {
-        return super.equals(other)
-    }
-
     override fun getParent():Parent? {
         return attributes.filterIsInstance<ContainedIn>().firstOrNull()?.parent
     }
