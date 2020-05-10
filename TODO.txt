@@ -1,5 +1,10 @@
-Context should remember histories
+CURRENT
+A table with stuff on
+Working towards MVP of an office!
+
+LATER
 A* apparently
 
-
+DONE!
+Context should remember histories
 Containers

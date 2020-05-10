@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b9359e08-072d-45b4-9ad5-ff6737e39407" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thing.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attributes/ContainedIn.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/ContainedIn.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attributes/Contains.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/attributes/Contains.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,10 +91,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="254" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.870@0.0.1600.870" timestamp="1585410483379" />
-    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1589119115090">
+    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1589122075214">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870@0.0.1600.870" timestamp="1589119115090" />
+    <state x="591" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870@0.0.1600.870" timestamp="1589122075214" />
     <state x="525" y="210" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1585492684967">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -158,9 +155,9 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1589115617246" />
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1589121806393">
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1589122077697">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1589121806393" />
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1589122077697" />
   </component>
 </project>
