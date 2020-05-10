@@ -2,12 +2,14 @@ package attributes
 
 import Consequence
 import Thing
+import World
 import actions.Action
 import actions.ActionDetails
 import actions.Verb
 import actions.definitions.Open
 import actions.definitions.Picklock
 import actions.definitions.Unlock
+import context.ContextManager
 
 class Locked(private val check: (Locked, Thing) -> Boolean): Attribute("locked", Classification.STATE) {
 

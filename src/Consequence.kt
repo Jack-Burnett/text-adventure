@@ -1,3 +1,5 @@
-class Consequence(val action : () -> Unit) {
+import context.ContextManager
+
+class Consequence(val action : (scope:ConsequenceScope) -> Unit) {
 
 }

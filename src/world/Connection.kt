@@ -27,8 +27,7 @@ class Connection(val area1:Area, val area2:Area, val barriers:MutableList<Thing>
                     val action : ActionDetails = ActionDetails(
                         Enter(),
                         Verb("", "", ActionName.ENTER),
-                        barrier,
-                        world
+                        barrier
                     )
                     if(attribute.actOn(action) != null) {
                         result = true

@@ -19,6 +19,7 @@ class Core(val world:World) {
             actionManager.add(Close())
             actionManager.add(Pickup())
             actionManager.add(Enter())
+            actionManager.add(Look())
 
             for(item in this.world.heldItems) {
                 for(attr in item.attributes) {
@@ -42,6 +43,7 @@ class Core(val world:World) {
 
                     subjects.addAll(contextManager.resolveNoun(word))
                 }
+                println("subjects $subjects")
 
                 if(verbs.size == 1 && subjects.size == 1) {
                     val verb = verbs[0]
@@ -52,10 +54,10 @@ class Core(val world:World) {
                         println("I am unable to ${verb.presentTense}")
                     } else {
 
-                        val actionDetails = ActionDetails(actions[0], verb, subject.thing, world)
+                        val actionDetails = ActionDetails(actions[0], verb, subject.thing)
                         val consequence:Consequence? = actions[0].apply(actionDetails)
                         if(consequence != null) {
-                            consequence.action.invoke()
+                            consequence.action.invoke(ConsequenceScope(world, contextManager))
                         } else {
                             println("Nothing happened")
                         }
@@ -66,5 +68,9 @@ class Core(val world:World) {
                 }
             }
         }
+    }
+
+    override fun hashCode(): Int {
+        return super.hashCode()
     }
 }

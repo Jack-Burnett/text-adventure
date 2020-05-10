@@ -1,25 +1,33 @@
 package attributes
 
-import Classification
-import Colour
 import Consequence
-import actions.definitions.Paint
 import Thing
-import actions.Action
 import actions.ActionDetails
-import actions.Verb
+import actions.definitions.*
+import context.ContextSetEntry
+import context.ContextSetRoom
+import kotlin.streams.toList
 
-class Contains(private var contents:MutableList<Thing>) : Attribute("contains",
-    Classification.STATE
+class Contains(contents:MutableList<Thing>) : SuperContainer("contains", contents
 ) {
 
     override fun toString(): String {
         return "full"
     }
 
-    public fun contents():MutableList<Thing> {
-        return contents;
+    override fun actOn(actionDetails: ActionDetails):Consequence? {
+        return when (actionDetails.action) {
+            is Look -> {
+                Consequence {
+                    println("The ${actionDetails.subject.name} contains " + context.describe(contents))
+                    it.context.publishContext(
+                        ContextSetRoom(it.world.currentArea, contents.stream().map { thing -> ContextSetEntry(thing) }.toList().toSet())
+                    )
+                }
+            }
+            else -> {
+                null
+            }
+        }
     }
-
-    // need someone to broadcast extra things to the context?
 }

@@ -17,8 +17,8 @@ class SmallItem() : Attribute("small",
         return when (actionDetails.action) {
             is Pickup -> {
                 Consequence {
-                    actionDetails.world.heldItems.add(actionDetails.subject)
-                    actionDetails.world.currentArea.contains.remove(actionDetails.subject)
+                    it.world.heldItems.add(actionDetails.subject)
+                    it.world.currentArea.contains.remove(actionDetails.subject)
 
                     println("You take the ${actionDetails.subject.name}")
                 }

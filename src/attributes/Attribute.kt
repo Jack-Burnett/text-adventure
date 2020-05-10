@@ -21,6 +21,8 @@ abstract class Attribute(
 
     open fun intercepts(details:ActionDetails):Consequence? { return null}
 
+    open fun interceptsContents(details:ActionDetails):Consequence? { return null}
+
     open fun grantActions(): List<Action> {
         return listOf()
     }

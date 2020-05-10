@@ -22,10 +22,14 @@ class VerbManager {
             VerbDefinition("unlocked", "unlock")
         ))
         insert(ActionName.PICKUP,  listOf(
-            VerbDefinition("pickup", "pickup")
+            VerbDefinition("pickup", "pickup"),
+            VerbDefinition("took", "take")
         ))
         insert(ActionName.ENTER,  listOf(
             VerbDefinition("enter", "enter")
+        ))
+        insert(ActionName.LOOK,  listOf(
+            VerbDefinition("look", "look")
         ))
     }
 

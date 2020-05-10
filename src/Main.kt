@@ -9,12 +9,13 @@ fun main() {
         //Locked { locked: Locked, thing:Thing -> true }
     ))
 
-    val chest = Thing("chest", mutableListOf(Coloured(Colour.BLUE), Sealable(Sealable.State.CLOSED)))
     val redPaint = Thing("paintpot", mutableListOf(Coloured(Colour.RED), Colours(Colour.RED), SmallItem()))
+    val chest = Thing("chest", mutableListOf(Coloured(Colour.BLUE), Sealable(Sealable.State.CLOSED),
+    Contains(mutableListOf(redPaint))))
 
 
     val room1 = Area(mutableListOf(chest))
-    val room2 = Area(mutableListOf( redPaint))
+    val room2 = Area(mutableListOf())
 
     val connection = Connection(room1, room2, mutableListOf(door))
 
